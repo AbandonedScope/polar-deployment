@@ -2,24 +2,24 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/abandonedscope/catalog-service/k8s?ref=b0c7a47d84f804cb5aa1ec7d25a964a4d2f3165f
+- github.com/abandonedscope/catalog-service/k8s?ref=b0c7a47d84f804cb5aa1ec7d25a964a4d2f3165f
 
 patchesStrategicMerge:
-  - patch-env.yml
-  - patch-volumes.yml
-  - patch-resources.yml
+- patch-env.yml
+- patch-volumes.yml
+- patch-resources.yml
 
 configMapGenerator:
-  - behavior: merge
-    files:
-      - application-prod.yml
-    name: catalog-config
+- behavior: merge
+  files:
+  - application-prod.yml
+  name: catalog-config
 
 images:
-  - name: catalog-service
-    newName: ghcr.io/abandonedscope/catalog-service
-    newTag: b0c7a47d84f804cb5aa1ec7d25a964a4d2f3165f
+- name: catalog-service
+  newName: ghcr.io/AbandonedScope/catalog-service
+  newTag: ca2c917320d88dc363d11e6b98846ac08b78cc53
 
 replicas:
-  - name: catalog-service
-    count: 2
+- count: 2
+  name: catalog-service
