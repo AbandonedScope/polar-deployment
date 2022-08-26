@@ -18,7 +18,7 @@ configMapGenerator:
 
 images:
 - name: edge-service
-  newName: ghcr.io/AbandonedScope/edge-service
+  newName: ghcr.io/abandonedscope/edge-service
   newTag: 95bd0c35e2c3800a6c041af3970788a78d66c71c
 
 replicas:

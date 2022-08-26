@@ -17,7 +17,7 @@ configMapGenerator:
 
 images:
 - name: catalog-service
-  newName: ghcr.io/AbandonedScope/catalog-service
+  newName: ghcr.io/abandonedscope/catalog-service
   newTag: ca2c917320d88dc363d11e6b98846ac08b78cc53
 
 replicas:
