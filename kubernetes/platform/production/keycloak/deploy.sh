@@ -14,7 +14,9 @@ sed "s/polar-keycloak-secret/$clientSecret/" resources/keycloak-config.yml | kub
 echo "\n📦 Configuring Helm chart..."
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
-helm upgrade --install polar-keycloak bitnami/keycloak --values values.yml  --namespace keycloak-system
+helm upgrade --install polar-keycloak bitnami/keycloak \
+  --values values.yml \
+  --namespace keycloak-system
 
 echo "\n⌛ Waiting for Keycloak to be deployed..."
 
@@ -49,5 +51,3 @@ kubectl create secret generic polar-keycloak-client-credentials \
 echo "\n🍃 A 'polar-keycloak-client-credentials' has been created for Spring Boot applications to interact with Keycloak."
 
 echo "\n🗝️  Keycloak deployment completed.\n"
-
-sleep 30

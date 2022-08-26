@@ -16,7 +16,6 @@ spec:
       containers:
         - name: polar-keycloak
           image: quay.io/keycloak/keycloak:18.0
-          imagePullPolicy: IfNotPresent
           args:
             - "start-dev"
           ports:

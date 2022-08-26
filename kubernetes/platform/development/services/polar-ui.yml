@@ -17,7 +17,7 @@ spec:
       containers:
         - name: polar-ui
           image: ghcr.io/polarbookshop/polar-ui:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           lifecycle:
             preStop:
               exec:
