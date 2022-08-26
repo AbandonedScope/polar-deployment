@@ -18,7 +18,7 @@ configMapGenerator:
 images:
 - name: order-service
   newName: ghcr.io/abandonedscope/order-service
-  newTag: c27d10c14d25105ba79a50e921331699fcc1169c
+  newTag: 9c75777106e971b76c79f94135ea3cd998436e1e
 
 replicas:
 - count: 1
