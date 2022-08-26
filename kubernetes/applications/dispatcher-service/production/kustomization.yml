@@ -17,8 +17,8 @@ configMapGenerator:
 
 images:
 - name: dispatcher-service
-  newName: ghcr.io/AbandonedScope/dispatcher-service
-  newTag: 05d65576fc91042305788d66147482913cd446df
+  newName: ghcr.io/abandonedscope/dispatcher-service
+  newTag: dacd4a15f9bb3b5bbe83289b1126ae394d8a71ff
 
 replicas:
 - count: 1
