@@ -2,24 +2,24 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/abandonedscope/dispatcher-service/k8s?ref=master
+  - github.com/abandonedscope/dispatcher-service/k8s?ref=master
 
 patchesStrategicMerge:
-- patch-env.yml
-- patch-resources.yml
-- patch-volumes.yml
+  - patch-env.yml
+  - patch-resources.yml
+  - patch-volumes.yml
 
 configMapGenerator:
-- behavior: merge
-  files:
-  - application-prod.yml
-  name: dispatcher-config
+  - behavior: merge
+    files:
+    - application-prod.yml
+    name: dispatcher-config
 
 images:
-- name: dispatcher-service
-  newName: ghcr.io/abandonedscope/dispatcher-service
-  newTag: c696c898439d6a38f246c69ea52d6cfece5d33db
+  - name: dispatcher-service
+    newName: ghcr.io/abandonedscope/dispatcher-service
+    newTag: c696c898439d6a38f246c69ea52d6cfece5d33db
 
 replicas:
-- count: 1
-  name: dispatcher-service
+  - count: 1
+    name: dispatcher-service
